@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','E-SHOP || Comment Page')
+@section('title','Ecom(Beta) || Comment Page')
 @section('main-content')
  <!-- DataTales Example -->
  <div class="card shadow mb-4">
@@ -41,7 +41,7 @@
             @foreach($comments as $comment)
                 <tr>
                     <td>{{$comment->id}}</td>
-                    <td>{{$comment->user_info['name']}}</td>
+                    <td>{{ $comment->user_info['name'] ?? 'N/A' }}</td> <!-- Use 'N/A' or any default value if user_info is null -->
                     <td>{{$comment->post->title}}</td>
                     <td>{{$comment->comment}}</td>
                     <td>{{$comment->created_at->format('M d D, Y g: i a')}}</td>

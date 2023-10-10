@@ -1,6 +1,6 @@
 @extends('backend.layouts.master')
 
-@section('title','E-SHOP || Banner Create')
+@section('title','Ecom(Beta) || Banner Create')
 
 @section('main-content')
 

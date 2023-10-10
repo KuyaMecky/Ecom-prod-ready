@@ -42,7 +42,7 @@ class StatusNotification extends Notification
     // {
     //     return (new MailMessage)
     //                 ->subject('Status Notification')
-    //                 ->from(env('MAIL_USERNAME','test@gmail.com'),'E-shop')
+    //                 ->from(env('MAIL_USERNAME','test@gmail.com'),'Ecom(Beta)')
     //                 ->line($this->details['title'])
     //                 ->action('View Order', $this->details['actionURL'])
     //                 ->line('Thank you!');

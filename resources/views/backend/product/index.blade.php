@@ -71,7 +71,11 @@
                     <td>  {{$product->discount}}% OFF</td>
                     <td>{{$product->size}}</td>
                     <td>{{$product->condition}}</td>
-                    <td> {{ucfirst($product->brand->title)}}</td>
+                    <td>
+                       @if(isset($product->brand) && isset($product->brand->title))
+                              {{ucfirst($product->brand->title)}}
+                          @endif
+                  
                     <td>
                       @if($product->stock>0)
                       <span class="badge badge-primary">{{$product->stock}}</span>
