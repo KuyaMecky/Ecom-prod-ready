@@ -102,8 +102,8 @@ Many more....
  ## Author Contact
   Contact me with any questions!<br>
 
-  Email: KuyaMecky.iar@gmail.com
-  Whatsapp: +977-9818441226
+  Email: Tallada88@gmail.com
+  Whatsapp: +63*********45
 
   ## License
   This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.<br />
