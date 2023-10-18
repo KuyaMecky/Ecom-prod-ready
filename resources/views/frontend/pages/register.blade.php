@@ -29,7 +29,10 @@
                         <h2>Register</h2>
                         <p>Please register in order to checkout more quickly</p>
                         <!-- Form -->
+
+                        <!-- registration -->
                         <form class="form" method="post" action="{{route('register.submit')}}">
+                            
                             @csrf
                             <div class="row">
                                 <div class="col-12">
@@ -80,6 +83,8 @@
                                 </div>
                             </div>
                         </form>
+
+                        <!-- end of registrations -->
                         <!--/ End Form -->
                     </div>
                 </div>

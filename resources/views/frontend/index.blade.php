@@ -504,7 +504,10 @@
                                             </div>
                                         </form>
                                         <div class="default-social">
-                                        <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+                                        <!-- ShareThis BEGIN --> 
+                                        <div class="sharethis-inline-share-buttons"></div> 
+                                        <!-- ShareThis END -->
+                                        <!-- Follow Button  --> <div class="sharethis-inline-follow-buttons"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -521,6 +524,8 @@
 @push('styles')
     <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script>
     <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script>
+    <!-- <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=6524cfdc7da2d70012db43b4&product=inline-share-buttons" async="async"></script> -->
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=6524cfdc7da2d70012db43b4&product=inline-follow-buttons&source=platform" async="async"></script>
     <style>
         /* Banner Sliding */
         #Gslider .carousel-inner {

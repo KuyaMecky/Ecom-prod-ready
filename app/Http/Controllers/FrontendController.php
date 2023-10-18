@@ -369,29 +369,34 @@ class FrontendController extends Controller
         return back();
     }
 
+    // TODO ayusin ung registration na ayaw mag Go through 17/10/2023
+
+    // register new user in the Databse as user
     public function register(){
         return view('frontend.pages.register');
     }
     public function registerSubmit(Request $request){
-        // return $request->all();
-        $this->validate($request,[
-            'name'=>'string|required|min:2',
-            'email'=>'string|required|unique:users,email',
-            'password'=>'required|min:6|confirmed',
+        // Validate the input data
+        $this->validate($request, [
+            'name' => 'string|required|min:2',
+            'email' => 'string|required|email|unique:users,email',
+            'password' => 'required|min:6|confirmed',
         ]);
-        $data=$request->all();
-        // dd($data);
-        $check=$this->create($data);
-        Session::put('user',$data['email']);
-        if($check){
-            request()->session()->flash('success','Successfully registered');
+    
+        // If the validation passes, proceed to create the user
+        $data = $request->all();
+        $check = $this->create($data);
+    
+        if ($check) {
+            Session::put('user', $data['email']);
+            request()->session()->flash('success', 'Successfully registered');
             return redirect()->route('home');
-        }
-        else{
-            request()->session()->flash('error','Please try again!');
+        } else {
+            request()->session()->flash('error', 'Please try again!');
             return back();
         }
     }
+    
     public function create(array $data){
         return User::create([
             'name'=>$data['name'],

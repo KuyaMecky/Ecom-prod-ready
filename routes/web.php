@@ -40,8 +40,10 @@
     Route::get('storage-link',[AdminController::class,'storageLink'])->name('storage.link');
 
 
-    Auth::routes(['register' => false]);
-
+    // Authentication for Registration routes
+    Auth::routes(['register' => True]);
+    // testing regiter form and nofty
+    // Route::get('/test-registration', 'FrontendController@testRegistration');
 
     
     Route::get('user/login', [FrontendController::class, 'login'])->name('login.form');
