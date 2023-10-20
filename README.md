@@ -1,4 +1,3 @@
-## Are you looking for a production-ready ecommerce & HRMS app?
 
 
 <<<<<<< HEAD
