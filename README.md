@@ -1,8 +1,12 @@
 ## Are you looking for a production-ready ecommerce & HRMS app?
 
 
+<<<<<<< HEAD
 ## Complete E-commerce website in  Laravel 10 (For Aladin 1)
 
+=======
+## Complete E-commerce website in  Laravel 10
+>>>>>>> bff78cfa069d406faa50b73d9b0d672ff543f1af
 
 ### Features :
 - ##### PWA (progressive web app)
@@ -102,8 +106,8 @@ Many more....
  ## Author Contact
   Contact me with any questions!<br>
 
-  Email: KuyaMecky.iar@gmail.com
-  Whatsapp: +977-9818441226
+  Email: Tallada88@gmail.com
+  Whatsapp: +63*********45
 
   ## License
   This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.<br />
