@@ -28,7 +28,10 @@
                         <img class="card-img-top img-fluid roundend-circle mt-4" style="border-radius:50%;height:80px;width:80px;margin:auto;" src="{{asset('backend/img/avatar.png')}}" alt="profile picture">
                         @endif
                     </div>
-                    <div class="card-body mt-4 ml-2">
+
+                    <div class="card-body mt-4 ml-2 ">
+                    
+                
                       <h5 class="card-title text-left"><small><i class="fas fa-user"></i> {{$profile->name}}</small></h5>
                       <p class="card-text text-left"><small><i class="fas fa-envelope"></i> {{$profile->email}}</small></p>
                       <p class="card-text text-left"><small class="text-muted"><i class="fas fa-hammer"></i> {{$profile->role}}</small></p>
@@ -53,7 +56,12 @@
                         <span class="text-danger">{{$message}}</span>
                         @enderror
                       </div>
-              
+
+                      <!-- Form for Image containment Pang background -->
+                      <!-- TODO ung sa background Gawaing interchangable -->
+
+                      
+                    <!-- Para naman sa Profile ng User -->
                       <div class="form-group">
                       <label for="inputPhoto" class="col-form-label">Photo</label>
                       <div class="input-group">
@@ -68,17 +76,40 @@
                         <span class="text-danger">{{$message}}</span>
                         @enderror
                       </div>
-                      <div class="form-group">
+
+                    
+                      <!-- <div class="form-group">
                           <label for="role" class="col-form-label">Role</label>
                           <select name="role" class="form-control">
-                              <option value="">-----Select Role-----</option>
+                              <option value="">Select Role</option>
                                   <option value="admin" {{(($profile->role=='admin')? 'selected' : '')}}>Admin</option>
                                   <option value="user" {{(($profile->role=='user')? 'selected' : '')}}>User</option>
                           </select>
                         @error('role')
                         <span class="text-danger">{{$message}}</span>
                         @enderror
-                        </div>
+                        </div> -->
+
+
+                        @if(Auth::user()->role === 'admin')
+                            <div class="form-group">
+                                <label for="role" class="col-form-label">Role</label>
+                                <select name="role" class="form-control">
+                                    <option value="">Select Role</option>
+                                    <option value="user" {{ ($profile->role == 'user' ? 'selected' : '') }}>User</option>
+                                    <option value="admin" {{ ($profile->role == 'admin' ? 'selected' : '') }}>Admin</option>
+                                </select>
+                                @error('role')
+                                <span class="text-danger">{{$message}}</span>
+                                @enderror
+                            </div>
+                        @endif
+
+
+
+
+
+
 
                         <button type="submit" class="btn btn-success btn-sm">Update</button>
                 </form>
@@ -108,17 +139,23 @@
     }
     .image{
         background:url('{{asset('backend/img/background.jpg')}}');
-        height:150px;
+        height:240.9px;
         background-position:center;
         background-attachment:cover;
         position: relative;
+        border-radius:2%;
+    
     }
+  
     .image img{
+        
         position: absolute;
-        top:55%;
+        top:70%;
         left:35%;
         margin-top:30%;
     }
+
+
     i{
         font-size: 14px;
         padding-right:8px;
@@ -129,5 +166,7 @@
 <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
 <script>
     $('#lfm').filemanager('image');
+    $('#lfm-background').filemanager('image');
+    
 </script>
 @endpush

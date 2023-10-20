@@ -377,25 +377,35 @@ class FrontendController extends Controller
     }
     public function registerSubmit(Request $request){
         // Validate the input data
-        $this->validate($request, [
-            'name' => 'string|required|min:2',
-            'email' => 'string|required|email|unique:users,email',
-            'password' => 'required|min:6|confirmed',
-        ]);
+        // TODO Polish the Sanitation of the data for penetration testing 20/10/2023
+        // $this->validate($request, [
+        //     'name' => 'string|required|min:2',
+        //     'email' => 'string|required|email',
+        //     'password' => 'required|min:6|confirmed',
+        // ]);
     
-        // If the validation passes, proceed to create the user
-        $data = $request->all();
-        $check = $this->create($data);
+        // Check if the user already exists with the given email
+        $user = User::firstOrNew(['email' => $request->input('email')]);
     
-        if ($check) {
-            Session::put('user', $data['email']);
-            request()->session()->flash('success', 'Successfully registered');
-            return redirect()->route('home');
-        } else {
-            request()->session()->flash('error', 'Please try again!');
-            return back();
+        if ($user->exists) {
+            // User with the same email already exists
+            request()->session()->flash('error', 'A user with this email already exists. Please log in or use a different email.');
+            return redirect()->back();
         }
+    
+        // If the user doesn't exist, proceed to create the user
+        $user->name = $request->input('name');
+        $user->password = Hash::make($request->input('password'));
+        $user->status = 'active';
+        $user->save();
+    
+        // Log in the new user
+        Auth::login($user);
+    
+        request()->session()->flash('success', 'Successfully registered');
+        return redirect()->route('home');
     }
+    
     
     public function create(array $data){
         return User::create([

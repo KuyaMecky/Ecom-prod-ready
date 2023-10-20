@@ -68,17 +68,19 @@
                         <span class="text-danger">{{$message}}</span>
                         @enderror
                       </div>
-                      <div class="form-group">
-                          <label for="role" class="col-form-label">Role</label>
-                          <select name="role" class="form-control">
-                              <option value="">-----Select Role-----</option>
-                                  <option value="admin" {{(($profile->role=='admin')? 'selected' : '')}}>Admin</option>
-                                  <option value="user" {{(($profile->role=='user')? 'selected' : '')}}>User</option>
-                          </select>
-                        @error('role')
-                        <span class="text-danger">{{$message}}</span>
-                        @enderror
-                        </div>
+                      @if(Auth::user()->role === 'admin')
+                            <div class="form-group">
+                                <label for="role" class="col-form-label">Role</label>
+                                <select name="role" class="form-control">
+                                    <option value="">Select Role</option>
+                                    <option value="user" {{ ($profile->role == 'user' ? 'selected' : '') }}>User</option>
+                                    <option value="admin" {{ ($profile->role == 'admin' ? 'selected' : '') }}>Admin</option>
+                                </select>
+                                @error('role')
+                                <span class="text-danger">{{$message}}</span>
+                                @enderror
+                            </div>
+                        @endif
 
                         <button type="submit" class="btn btn-success btn-sm">Update</button>
                 </form>
@@ -108,10 +110,12 @@
     }
     .image{
         background:url('{{asset('backend/img/background.jpg')}}');
-        height:150px;
+        height:185px;
         background-position:center;
         background-attachment:cover;
         position: relative;
+        border-radius:2%;
+    
     }
     .image img{
         position: absolute;
