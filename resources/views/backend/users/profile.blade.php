@@ -59,8 +59,6 @@
 
                       <!-- Form for Image containment Pang background -->
                       <!-- TODO ung sa background Gawaing interchangable -->
-
-                      
                     <!-- Para naman sa Profile ng User -->
                       <div class="form-group">
                       <label for="inputPhoto" class="col-form-label">Photo</label>

@@ -58,7 +58,11 @@
     Route::get('login/{provider}/', [LoginController::class, 'redirect'])->name('login.redirect');
     Route::get('login/{provider}/callback/', [LoginController::class, 'Callback'])->name('login.callback');
 
-    Route::get('/', [FrontendController::class, 'home'])->name('home');
+    // Route::get('/', [FrontendController::class, 'home'])->name('home');
+    // For new Route directory of the new home 
+    // making the new home as blog page
+    Route::get('/', [FrontendController::class, 'blog'])->name('home');
+    // class home to blog
 
 // Frontend Routes
     Route::get('/home', [FrontendController::class, 'index']);
@@ -103,7 +107,6 @@
     Route::post('/blog/filter', [FrontendController::class, 'blogFilter'])->name('blog.filter');
     Route::get('blog-cat/{slug}', [FrontendController::class, 'blogByCategory'])->name('blog.category');
     Route::get('blog-tag/{slug}', [FrontendController::class, 'blogByTag'])->name('blog.tag');
-
 // NewsLetter
     Route::post('/subscribe', [FrontendController::class, 'subscribe'])->name('subscribe');
 

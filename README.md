@@ -111,6 +111,6 @@ Many more....
   ## License
   This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.<br />
 <hr>
-  Copyright © 2023 [KuyaMecky](https://raiKuyaMecky.com/)
+  Copyright © 2023 [KuyaMecky](https://github.com/KuyaMecky)
   
 <p style="text-align:center">Thank You so much for your time !!!</p>
