@@ -1,11 +1,9 @@
 
 
-<<<<<<< HEAD
 ## Complete E-commerce website in  Laravel 10 (For Aladin 1)
-
 =======
 ## Complete E-commerce website in  Laravel 10
->>>>>>> bff78cfa069d406faa50b73d9b0d672ff543f1af
+
 
 ### Features :
 - ##### PWA (progressive web app)
