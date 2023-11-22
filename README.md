@@ -1,11 +1,9 @@
 
 
-<<<<<<< HEAD
 ## Complete E-commerce website in  Laravel 10 (For Aladin 1)
-
 =======
 ## Complete E-commerce website in  Laravel 10
->>>>>>> bff78cfa069d406faa50b73d9b0d672ff543f1af
+
 
 ### Features :
 - ##### PWA (progressive web app)
@@ -112,5 +110,11 @@ Many more....
   This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.<br />
 <hr>
   Copyright © 2023 [KuyaMecky](https://github.com/KuyaMecky)
-  
+
+
+```
+original theme color "#f7941d"
+ ## #145bb3
+```
+
 <p style="text-align:center">Thank You so much for your time !!!</p>

@@ -54,6 +54,10 @@
     Route::post('user/register', [FrontendController::class, 'registerSubmit'])->name('register.submit');
 // Reset password
     Route::post('password-reset', [FrontendController::class, 'showResetForm'])->name('password.reset');
+
+//  temporary serialization
+    // Route::post('password-reset', [FrontendController::class, 'showResetForm'])->name('temp.password.reset');
+
 // Socialite
     Route::get('login/{provider}/', [LoginController::class, 'redirect'])->name('login.redirect');
     Route::get('login/{provider}/callback/', [LoginController::class, 'Callback'])->name('login.callback');
@@ -61,7 +65,7 @@
     // Route::get('/', [FrontendController::class, 'home'])->name('home');
     // For new Route directory of the new home 
     // making the new home as blog page
-    Route::get('/', [FrontendController::class, 'blog'])->name('home');
+    Route::get('/', [FrontendController::class, 'home'])->name('home');
     // class home to blog
 
 // Frontend Routes
