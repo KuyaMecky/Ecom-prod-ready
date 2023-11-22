@@ -108,7 +108,7 @@ Many more....
 
 <hr>
 
-<<<<<<< HEAD
+## HEAD
 
   Copyright © 2023 [KuyaMecky](https://github.com/KuyaMecky)
 
@@ -116,6 +116,5 @@ Many more....
 original theme color "#f7941d"
  ## #145bb3
 ```
-=======
-  Copyright © 2023 [KuyaMecky](https://github.com/KuyaMecky)
+## Copyright © 2023 [KuyaMecky](https://github.com/KuyaMecky)
 <p style="text-align:center">Thank You so much for your time !!!</p>
