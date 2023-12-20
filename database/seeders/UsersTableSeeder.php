@@ -1,7 +1,9 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
+
 class UsersTableSeeder extends Seeder
 {
     /**
@@ -30,13 +32,7 @@ class UsersTableSeeder extends Seeder
                 'role'=>'user',
                 'status'=>'active'
             ),
-            // third user for another user sample
-            array(
-                'name' => 'user2',
-                'email' => 'username2@gmail.com',
-                'role'=>'user',
-                'status'=>'active'
-            )
+           
         );
 
         DB::table('users')->insert($data);
