@@ -105,13 +105,16 @@ Many more....
 
   ## License
   This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.<br />
+
 <hr>
-<<<<<<< HEAD
+
+## HEAD
+
   Copyright © 2023 [KuyaMecky](https://github.com/KuyaMecky)
+
 ```
 original theme color "#f7941d"
  ## #145bb3
 ```
-=======
-  Copyright © 2023 [KuyaMecky](https://github.com/KuyaMecky)
+## Copyright © 2023 [KuyaMecky](https://github.com/KuyaMecky)
 <p style="text-align:center">Thank You so much for your time !!!</p>
